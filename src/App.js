@@ -14,7 +14,6 @@ export default function App() {
       }}
     >
       <h1>Random Color Generator</h1>
-      Generated Color: {color}
       <div
         id="colorSquare"
         style={{
@@ -25,6 +24,7 @@ export default function App() {
           position: 'relative',
         }}
       />
+      Random Color Generator Generated Color: {color}
       <h3
         style={{
           fontSize: '15px',
