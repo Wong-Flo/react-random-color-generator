@@ -1,17 +1,8 @@
-import chalk from 'chalk';
 import randomColor from 'randomcolor';
 import { useState } from 'react';
 
-// const hue = [];
-// const luminosity = [];
-// hue: `${hue}`,
-// luminosity: `${luminosity}`,
-const initialColor = randomColor();
-
 export default function App() {
-  const [color, setColor] = useState(initialColor);
-
-  // const [colorInput, setColorInput] = useState();
+  const [color, setColor] = useState(randomColor);
   return (
     <div
       style={{
@@ -29,11 +20,11 @@ export default function App() {
           width: '300px',
           height: '100px',
           padding: '50px',
-          backgroundColor: initialColor,
+          backgroundColor: color,
           position: 'relative',
         }}
       />
-      Generated Color: {chalk.hex(randomColor)}
+      Generated Color: {color}
       <h3
         style={{
           fontSize: '15px',
@@ -48,10 +39,7 @@ export default function App() {
           marginTop: '2px',
           marginBottom: '10px',
         }}
-        onClick={() =>
-          (document.getElementById('colorSquare').style.backgroundColor =
-            randomColor())
-        }
+        onClick={() => setColor(randomColor())}
       >
         Generate
       </button>
