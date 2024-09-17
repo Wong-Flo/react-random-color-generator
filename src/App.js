@@ -21,10 +21,13 @@ export default function App() {
           height: '100px',
           padding: '50px',
           backgroundColor: color,
-          position: 'relative',
+          alignItems: 'center',
+          display: 'flex',
+          justifyContent: 'center',
         }}
-      />
-      Random Color Generator Generated Color: {color}
+      >
+        Generated Color: {color}
+      </div>
       <h3
         style={{
           fontSize: '15px',
